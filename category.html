@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .category-container {
+            display: flex;
+            height: calc(100vh - 50px);
+            margin-top: 0;
+            background: #fff;
+        }
+
+        .category-sidebar {
+            width: 85px;
+            background: #f8f8f8;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .category-sidebar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .sidebar-item {
+            padding: 15px 0;
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+            position: relative;
+        }
+
+        .sidebar-item.active {
+            background: #fff;
+            color: #E02E24;
+            font-weight: 500;
+        }
+
+        .sidebar-item.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 16px;
+            background: #E02E24;
+        }
+
+        .category-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .category-content::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-banner {
+            width: 100%;
+            height: 100px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background: #f0f0f0;
+            position: relative;
+        }
+
+        .category-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .sub-category-title {
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+
+        .sub-category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .sub-category-item {
+            text-align: center;
+        }
+
+        .sub-category-item img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 5px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .sub-category-item span {
+            font-size: 12px;
+            color: #666;
+            display: block;
+        }
+
+        /* 底部导航样式已存在于style.css中 */
+    </style>
+</head>
+<body>
+    <!-- 搜索栏 -->
+    <div class="search-bar">
+        <div class="search-box">
+            <i class="icon-search"></i>
+            <input type="text" placeholder="搜索商品">
+        </div>
+    </div>
+
+    <!-- 分类内容 -->
+    <div class="category-container">
+        <!-- 左侧分类导航 -->
+        <div class="category-sidebar">
+            <div class="sidebar-item active">推荐分类</div>
+            <div class="sidebar-item">食品生鲜</div>
+            <div class="sidebar-item">美妆个护</div>
+            <div class="sidebar-item">家居日用</div>
+            <div class="sidebar-item">数码家电</div>
+            <div class="sidebar-item">服饰鞋包</div>
+            <div class="sidebar-item">母婴玩具</div>
+            <div class="sidebar-item">运动户外</div>
+            <div class="sidebar-item">家具建材</div>
+            <div class="sidebar-item">汽车用品</div>
+            <div class="sidebar-item">图书文具</div>
+            <div class="sidebar-item">医药保健</div>
+            <div class="sidebar-item">珠宝配饰</div>
+            <div class="sidebar-item">宠物用品</div>
+        </div>
+
+        <!-- 右侧分类详情 -->
+        <div class="category-content">
+            <!-- 分类广告图 -->
+            <div class="category-banner">
+                <img src="https://picsum.photos/300/100" alt="分类广告">
+            </div>
+
+            <!-- 推荐分类 -->
+            <div class="sub-category-section">
+                <h3 class="sub-category-title">热门分类</h3>
+                <div class="sub-category-grid">
+                    <div class="sub-category-item">
+                        <img src="https://picsum.photos/60" alt="生鲜水果">
+                        <span>生鲜水果</span>
+                    </div>
+                    <div class="sub-category-item">
+                        <img src="https://picsum.photos/60" alt="零食小吃">
+                        <span>零食小吃</span>
+                    </div>
+                    <div class="sub-category-item">
+                        <img src="https://picsum.photos/60" alt="美妆护肤">
+                        <span>美妆护肤</span>
+                    </div>
+                    <div class="sub-category-item">
+                        <img src="https://picsum.photos/60" alt="家居清洁">
+                        <span>家居清洁</span>
+                    </div>
+                    <div class="sub-category-item">
+                        <img src="https://picsum.photos/60" alt="数码配件">
+                        <span>数码配件</span>
+                    </div>
+                    <div class="sub-category-item">
+                        <img src="https://picsum.photos/60" alt="女装服饰">
+                        <span>女装服饰</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 热销榜单 -->
+            <div class="sub-category-section">
+                <h3 class="sub-category-title">热销榜单</h3>
+                <div class="sub-category-grid">
+                    <div class="sub-category-item">
+                        <img src="https://picsum.photos/60" alt="销量榜">
+                        <span>销量榜</span>
+                    </div>
+                    <div class="sub-category-item">
+                        <img src="https://picsum.photos/60" alt="好评榜">
+                        <span>好评榜</span>
+                    </div>
+                    <div class="sub-category-item">
+                        <img src="https://picsum.photos/60" alt="新品榜">
+                        <span>新品榜</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航 -->
+    <div class="bottom-nav">
+        <div class="nav-item">
+            <i class="icon-home"></i>
+            <span>首页</span>
+        </div>
+        <div class="nav-item active">
+            <i class="icon-category"></i>
+            <span>分类</span>
+        </div>
+        <div class="nav-item">
+            <i class="icon-cart"></i>
+            <span>购物车</span>
+        </div>
+        <div class="nav-item">
+            <i class="icon-user"></i>
+            <span>我的</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 侧边栏切换效果
+            const sidebarItems = document.querySelectorAll('.sidebar-item');
+            sidebarItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // 移除其他项的active类
+                    sidebarItems.forEach(i => i.classList.remove('active'));
+                    // 为当前项添加active类
+                    this.classList.add('active');
+                    
+                    // TODO: 加载对应分类的内容
+                    console.log('加载分类：', this.innerText);
+                });
+            });
+
+            // 处理底部导航跳转
+            document.querySelector('.icon-home').parentElement.addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <img src="https://cdn.pinduoduo.com/assets/login/pdd-logo.png" alt="Logo" class="logo">
+            <h1>欢迎登录</h1>
+        </div>
+        
+        <div class="login-form">
+            <div class="input-group">
+                <input type="tel" id="phone" placeholder="请输入手机号" maxlength="11">
+                <span class="clear-input" id="clearPhone">✕</span>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" id="verifyCode" placeholder="请输入验证码" maxlength="6">
+                <button class="verify-btn" id="getVerifyCode">获取验证码</button>
+            </div>
+            
+            <button class="login-btn" id="loginBtn">登录</button>
+            
+            <div class="agreement">
+                登录即代表您已同意
+                <a href="#">用户协议</a>
+                和
+                <a href="#">隐私政策</a>
+            </div>
+        </div>
+        
+        <div class="other-login">
+            <div class="divider">
+                <span>其他登录方式</span>
+            </div>
+            <div class="login-methods">
+                <div class="method">
+                    <i class="icon wechat"></i>
+                    <span>微信</span>
+                </div>
+                <div class="method">
+                    <i class="icon qq"></i>
+                    <span>QQ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html> 
